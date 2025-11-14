@@ -4,10 +4,12 @@ import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Data;
+import lombok.ToString;
 
 @Entity
 @Table(name = "topics")
 @Data
+@ToString
 public class Topic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
