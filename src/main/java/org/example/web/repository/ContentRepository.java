@@ -1,4 +1,3 @@
-// ContentRepository.java
 package org.example.web.repository;
 
 import org.example.dto.Content;
@@ -12,9 +11,9 @@ import java.util.List;
 @Repository
 public interface ContentRepository extends JpaRepository<Content, Long> {
     List<Content> findByTopicId(Long topicId);
-    
+
     @Query("SELECT c FROM Content c WHERE c.scheduledTime = :now AND c.sent = false")
     List<Content> findDueContents(@Param("now") LocalDateTime now);
-    
+
     List<Content> findBySentFalseAndScheduledTimeBefore(LocalDateTime time);
 }

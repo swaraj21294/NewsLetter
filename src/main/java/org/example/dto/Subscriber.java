@@ -9,7 +9,6 @@ import lombok.ToString;
 @Entity
 @Table(name = "subscribers")
 @Data
-@ToString
 public class Subscriber {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +22,7 @@ public class Subscriber {
     @NotBlank
     private String name;
     
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "topic_id")
     private Topic topic;
     

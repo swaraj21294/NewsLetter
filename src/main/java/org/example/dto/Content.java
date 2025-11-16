@@ -3,12 +3,10 @@ package org.example.dto;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import lombok.Data;
-import lombok.ToString;
 
 @Entity
 @Table(name = "contents")
 @Data
-@ToString
 public class Content {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +23,7 @@ public class Content {
     
     private boolean sent = false;
     
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "topic_id")
     private Topic topic;
     
