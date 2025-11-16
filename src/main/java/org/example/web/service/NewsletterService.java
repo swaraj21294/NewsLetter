@@ -32,7 +32,7 @@ public class NewsletterService {
         LocalDateTime now = LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES);
 
         log.info("Running Schedule at {}" ,now);
-        logMemory("sch");
+//        logMemory("sch");
         List<Content> dueContents = contentRepository.findDueContents(now);
 
         for (Content content : dueContents) {
