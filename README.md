@@ -15,7 +15,7 @@ Download the Postman collection to use the service: News Letter Collection.postm
 ---
 USAGE INSTRUCTIONS
 ---
-
+Initial data was loaded using import.sql contents
 ### Retrieving Data (GET Endpoints)
 * Use the **GET** endpoints (/api/contents, /api/topics, /api/subscribers) to view the existing data in the database for newsletter contents, topics, and subscribers.
 
